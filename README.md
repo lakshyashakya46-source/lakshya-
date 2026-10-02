@@ -38,7 +38,7 @@ docker-compose up --build -d
 docker-compose --profile seed run --rm seed
 
 # 4. App is live at:
-#    http://localhost:5000
+#    http://https://lakshya-2.onrender.com
 ```
 
 ## 🔧 Local Development (without Docker)
@@ -52,7 +52,7 @@ cd server
 # Edit .env: set DB_HOST=localhost
 npm install
 npm run seed   # populate database
-npm start      # http://localhost:5000
+npm start      # http://https://lakshya-2.onrender.com
 
 # Client (separate terminal)
 cd client
