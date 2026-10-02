@@ -14,7 +14,7 @@ export default function BeforeAfterSlider({
   const containerRef = useRef(null);
 
   // Backend API URL
-  const API_URL = 'http://https://lakshya-2.onrender.com';
+  const API_URL = 'https://lakshya-2.onrender.com';
 
   // Convert DB image path into a complete URL
   const getImageUrl = (image) => {

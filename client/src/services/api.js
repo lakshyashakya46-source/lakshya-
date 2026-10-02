@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = 'https://lakshya-2.onrender.com/api';
 
 export function formatRupee(amount) {
   if (amount === null || amount === undefined) return '₹0';
