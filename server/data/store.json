@@ -1,0 +1,412 @@
+{
+  "departments": [
+    {
+      "id": "dept_edu",
+      "code": "EDU",
+      "name_en": "School Education & Literacy (School Theek Karo)",
+      "name_hi": "स्कूली शिक्षा और साक्षरता विभाग",
+      "ministry": "Ministry of Education / State Education Directorate",
+      "icon": "School",
+      "color": "emerald",
+      "total_budget_cr": 1420.5,
+      "disbursed_cr": 840.2,
+      "active_projects": 428,
+      "description": "Rebuilding government school infrastructure, modern STEM labs, clean sanitation blocks, and drinking water facilities across India."
+    }
+  ],
+  "contractors": [
+    {
+      "id": "cont_1",
+      "company_name": "National Infra & Civic Builders Ltd (NICBL)",
+      "registration_no": "GSTIN: 07AAACN1234F1Z5",
+      "category": "CIVIL_WORKS",
+      "rating": 4.8,
+      "active_contracts": 6,
+      "completed_contracts": 34,
+      "contact_email": "contracts@nicbl-infra.gov.in",
+      "phone": "+91 98101 23456"
+    },
+    {
+      "id": "cont_3",
+      "company_name": "Surya CleanTech & Solar EPC Solutions",
+      "registration_no": "GSTIN: 27AABCN4321D1Z8",
+      "category": "ELECTRICAL_SOLAR",
+      "rating": 4.9,
+      "active_contracts": 5,
+      "completed_contracts": 19,
+      "contact_email": "projects@suryacleantech.in",
+      "phone": "+91 98220 11223"
+    }
+  ],
+  "entities": [
+    {
+      "id": "ent_1",
+      "dept_code": "EDU",
+      "name": "Sarvodaya Kanya Vidyalaya (SKV Dilshad Garden)",
+      "code_identifier": "UDISE: 07040100201",
+      "state": "Delhi (NCT)",
+      "district": "Shahdara",
+      "pincode": "110095",
+      "head_name": "Dr. Sunita Sharma (Principal)",
+      "contact": "+91 98112 34567",
+      "latitude": 28.6759,
+      "longitude": 77.3182,
+      "student_count": 1450,
+      "before_image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80",
+      "after_image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+      "current_condition_rating": 4.7,
+      "udise_code": "07040100201",
+      "data_source": "UDISE",
+      "source_verified_at": "2026-09-26T10:28:38.593Z"
+    },
+    {
+      "id": "ent_2",
+      "dept_code": "EDU",
+      "name": "Rajkiya Pratibha Vikas Vidyalaya (RPVV Sector 11 Rohini)",
+      "code_identifier": "UDISE: 07020101804",
+      "state": "Delhi (NCT)",
+      "district": "North West Delhi",
+      "pincode": "110085",
+      "head_name": "Shri Rakesh Verma (Head of School)",
+      "contact": "+91 98711 88990",
+      "latitude": 28.7158,
+      "longitude": 77.1125,
+      "student_count": 980,
+      "before_image": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
+      "after_image": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+      "current_condition_rating": 4.9,
+      "udise_code": "07020101804",
+      "data_source": "UDISE",
+      "source_verified_at": "2026-09-26T10:28:38.601Z"
+    },
+    {
+      "id": "ent_3",
+      "dept_code": "EDU",
+      "name": "Zilla Parishad Madhyamik Shala, Baramati",
+      "code_identifier": "UDISE: 27250401103",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "pincode": "413102",
+      "head_name": "Smt. Anjali Patil (Headmistress)",
+      "contact": "+91 94220 77665",
+      "latitude": 18.1524,
+      "longitude": 74.5771,
+      "student_count": 820,
+      "before_image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
+      "after_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80",
+      "current_condition_rating": 4.4,
+      "udise_code": "27250401103",
+      "data_source": "UDISE",
+      "source_verified_at": "2026-09-26T10:28:38.601Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_1",
+      "entity_id": "ent_1",
+      "dept_code": "EDU",
+      "title": "Model Sanitation Block, RO Drinking Water & STEM Robotics Lab",
+      "scheme_name": "School Theek Karo / PM SHRI Revamp 2026",
+      "total_budget": 4500000,
+      "sanctioned_amount": 4500000,
+      "disbursed_amount": 3000000,
+      "status": "UNDER_INSPECTION",
+      "completion_deadline": "2026-11-15",
+      "sanctioned_date": "2026-03-10",
+      "contractor_id": "cont_1",
+      "officer_name": "Shri Arvind Kaushik, IAS (Director of Education)",
+      "description": "Complete overhaul of female student hygiene facilities (8 cubicles with automated incinerator), 2,000 LPH RO water plant, and 20-workstation STEM tinkering robotics lab.",
+      "escrow_account_no": "RBI-PFMS-ESCROW-98821-EDU",
+      "progress_pct": 85
+    },
+    {
+      "id": "proj_2",
+      "entity_id": "ent_2",
+      "dept_code": "EDU",
+      "title": "High-Tech Digital Interactive Classrooms & Rooftop Solar 25kW",
+      "scheme_name": "Delhi Model School Modernization Drive",
+      "total_budget": 3200000,
+      "sanctioned_amount": 3200000,
+      "disbursed_amount": 3200000,
+      "status": "COMPLETED",
+      "completion_deadline": "2026-08-30",
+      "sanctioned_date": "2026-01-15",
+      "contractor_id": "cont_3",
+      "officer_name": "Dr. Meenakshi Sundaram, IAS (Special Secretary)",
+      "description": "Installation of 85-inch 4K Interactive Flat Panels across 12 senior classrooms, acoustic panelling, and 25kW rooftop solar microgrid with net-metering.",
+      "escrow_account_no": "RBI-PFMS-ESCROW-98822-EDU",
+      "progress_pct": 100
+    },
+    {
+      "id": "proj_6",
+      "entity_id": "ent_3",
+      "dept_code": "EDU",
+      "title": "Earthquake Retrofitting, Waterproofing & Solar Power Plant",
+      "scheme_name": "Maharashtra ZP School Transformation Drive",
+      "total_budget": 2800000,
+      "sanctioned_amount": 2800000,
+      "disbursed_amount": 0,
+      "status": "SANCTIONED",
+      "completion_deadline": "2027-02-28",
+      "sanctioned_date": "2026-09-01",
+      "contractor_id": "cont_1",
+      "officer_name": "Shri Nitin Gadre, IAS (Divisional Commissioner Pune)",
+      "description": "Structural jacketing of classroom load-bearing pillars, complete roof elastomeric waterproofing to prevent monsoon leakage, and 10kW solar system.",
+      "escrow_account_no": "RBI-PFMS-ESCROW-33981-EDU",
+      "progress_pct": 10
+    }
+  ],
+  "milestones": [
+    {
+      "id": "mile_1_1",
+      "project_id": "proj_1",
+      "milestone_title": "Phase 1: Civil Foundation & Underground Plumbing Network",
+      "sequence": 1,
+      "allocated_amount": 1500000,
+      "status": "DISBURSED",
+      "contractor_submission_notes": "Completed structural excavation, PCC bedding, underground drainage pipes, and sewer septic connection with anti-leakage test.",
+      "contractor_invoice_url": "INV-2026-042.pdf",
+      "contractor_submitted_at": "2026-04-18T10:30:00Z",
+      "verified_at": "2026-04-22T14:15:00Z",
+      "disbursed_at": "2026-04-24T16:00:00Z"
+    },
+    {
+      "id": "mile_1_2",
+      "project_id": "proj_1",
+      "milestone_title": "Phase 2: Sanitary Ware, Tiling & 2000 LPH RO Filtration Unit",
+      "sequence": 2,
+      "allocated_amount": 1500000,
+      "status": "DISBURSED",
+      "contractor_submission_notes": "Vitrified anti-skid floor tiles installed, Hindware ceramic sanitary fixtures, automated sensor taps, and commercial grade RO plant mounted.",
+      "contractor_invoice_url": "INV-2026-098.pdf",
+      "contractor_submitted_at": "2026-07-10T11:00:00Z",
+      "verified_at": "2026-07-14T15:20:00Z",
+      "disbursed_at": "2026-07-16T11:45:00Z"
+    },
+    {
+      "id": "mile_1_3",
+      "project_id": "proj_1",
+      "milestone_title": "Phase 3: STEM Robotics Lab Furniture, 20 Laptops & 3D Printer",
+      "sequence": 3,
+      "allocated_amount": 1500000,
+      "status": "INSPECTED_PASSED",
+      "contractor_submission_notes": "Delivered and configured 20 Dell Core-i7 learning workstations, 2 BambuLab 3D printers, IoT sensor starter kits, and fire safety systems.",
+      "contractor_invoice_url": "INV-2026-174.pdf",
+      "contractor_submitted_at": "2026-09-12T09:00:00Z",
+      "verified_at": "2026-09-18T16:30:00Z",
+      "disbursed_at": null
+    },
+    {
+      "id": "mile_2_1",
+      "project_id": "proj_2",
+      "milestone_title": "Phase 1: 25kW Rooftop Solar Panels & Inverter Installation",
+      "sequence": 1,
+      "allocated_amount": 1600000,
+      "status": "DISBURSED",
+      "contractor_submission_notes": "Bi-facial monocrystalline solar panels erected on galvanized iron superstructure. Inverter connected to school main LT panel.",
+      "contractor_invoice_url": "INV-SOLAR-01.pdf",
+      "contractor_submitted_at": "2026-03-20T12:00:00Z",
+      "verified_at": "2026-03-25T14:00:00Z",
+      "disbursed_at": "2026-03-27T10:00:00Z"
+    },
+    {
+      "id": "mile_2_2",
+      "project_id": "proj_2",
+      "milestone_title": "Phase 2: 12 Interactive 4K Flat Panels & Classroom Audio Systems",
+      "sequence": 2,
+      "allocated_amount": 1600000,
+      "status": "DISBURSED",
+      "contractor_submission_notes": "Mounted interactive touch panels in 12 senior wings with stylus pens, high-speed Wi-Fi 6 access points, and acoustic treatment.",
+      "contractor_invoice_url": "INV-DIGI-02.pdf",
+      "contractor_submitted_at": "2026-07-28T14:30:00Z",
+      "verified_at": "2026-08-05T11:15:00Z",
+      "disbursed_at": "2026-08-08T15:30:00Z"
+    }
+  ],
+  "inspections": [
+    {
+      "id": "insp_1",
+      "milestone_id": "mile_1_1",
+      "inspector_name": "Er. Deepa Nair",
+      "inspector_id": "PWD-QI-DL-088",
+      "latitude": 28.6758,
+      "longitude": 77.3184,
+      "geo_verified": true,
+      "distance_meters": 24,
+      "checklist": [
+        {
+          "item": "Structural excavation depth verified (>= 1.2m)",
+          "passed": true
+        },
+        {
+          "item": "PVC pipe wall thickness as per IS 4985 standard",
+          "passed": true
+        },
+        {
+          "item": "Leakage hydraulic pressure test conducted",
+          "passed": true
+        },
+        {
+          "item": "No child safety hazards on active school ground",
+          "passed": true
+        }
+      ],
+      "verdict": "APPROVED",
+      "notes": "Excavation and foundation work executed strictly as per CPWD specifications. Zero debris blocking student walkways.",
+      "photos": [
+        "https://images.unsplash.com/photo-1541888946425-d0fbb1861593?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
+      ],
+      "inspected_at": "2026-04-22T14:15:00Z"
+    },
+    {
+      "id": "insp_2",
+      "milestone_id": "mile_1_2",
+      "inspector_name": "Er. Deepa Nair",
+      "inspector_id": "PWD-QI-DL-088",
+      "latitude": 28.6759,
+      "longitude": 77.3181,
+      "geo_verified": true,
+      "distance_meters": 12,
+      "checklist": [
+        {
+          "item": "Anti-skid floor tiles grade checked",
+          "passed": true
+        },
+        {
+          "item": "Hindware fixtures pressure tested, no leaks",
+          "passed": true
+        },
+        {
+          "item": "RO water TDS reduction measured: 480ppm to 65ppm",
+          "passed": true
+        },
+        {
+          "item": "Automated sanitary napkin incinerator functional",
+          "passed": true
+        }
+      ],
+      "verdict": "APPROVED",
+      "notes": "Outstanding sanitary transformation. Water test lab certificate cross-verified with Bureau of Indian Standards (BIS 10500:2012).",
+      "photos": [
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=600&q=80"
+      ],
+      "inspected_at": "2026-07-14T15:20:00Z"
+    },
+    {
+      "id": "insp_3",
+      "milestone_id": "mile_1_3",
+      "inspector_name": "Dr. Alok Srivastava",
+      "inspector_id": "GOV-TECH-AUDIT-412",
+      "latitude": 28.676,
+      "longitude": 77.3183,
+      "geo_verified": true,
+      "distance_meters": 15,
+      "checklist": [
+        {
+          "item": "20 Laptops serial numbers matched with GeM invoice",
+          "passed": true
+        },
+        {
+          "item": "All 20 laptops running licensed OS and STEM toolchain",
+          "passed": true
+        },
+        {
+          "item": "3D printers test calibration print executed (bench test passed)",
+          "passed": true
+        },
+        {
+          "item": "Earthing and surge suppression safety verified",
+          "passed": true
+        },
+        {
+          "item": "SMC President & Principal sign-off received",
+          "passed": true
+        }
+      ],
+      "verdict": "APPROVED",
+      "notes": "Verified all 20 laptops in active running state. Lab setup is world-class and ready for students. Recommended for immediate escrow disbursement.",
+      "photos": [
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
+      ],
+      "inspected_at": "2026-09-18T16:30:00Z"
+    }
+  ],
+  "grievances": [
+    {
+      "id": "griev_1",
+      "entity_id": "ent_1",
+      "project_id": "proj_1",
+      "citizen_name": "Manoj Kumar (Parent & SMC Member)",
+      "mobile": "+91 98991 77654",
+      "reporter_role": "Parent",
+      "category": "Water Pressure",
+      "description": "During morning break around 10:30 AM, water pressure in 2nd floor washroom taps was low. Please ask contractor to check booster pump timer.",
+      "photo_url": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80",
+      "status": "RESOLVED",
+      "action_taken": "Contractor recalibrated automated pressure sensor and cleaned inlet strainer on 2026-09-14. Water pressure restored to 2.8 bar.",
+      "created_at": "2026-09-13T11:20:00Z",
+      "resolved_at": "2026-09-14T17:00:00Z"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "tx_pfms_001",
+      "utr_no": "PFMS2026042400981123",
+      "project_id": "proj_1",
+      "milestone_id": "mile_1_1",
+      "amount": 1500000,
+      "from_account": "RBI Consolidated Fund / MoE Escrow-98821",
+      "to_beneficiary": "National Infra & Civic Builders Ltd (NICBL)",
+      "bank_account_masked": "SBI A/C ***9012",
+      "approved_by": "Shri Arvind Kaushik, IAS (Director)",
+      "verified_by_inspector": "Er. Deepa Nair (PWD-QI-DL-088)",
+      "timestamp": "2026-04-24T16:00:00Z",
+      "cryptographic_hash": "SHA256: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+    },
+    {
+      "id": "tx_pfms_002",
+      "utr_no": "PFMS2026071600874419",
+      "project_id": "proj_1",
+      "milestone_id": "mile_1_2",
+      "amount": 1500000,
+      "from_account": "RBI Consolidated Fund / MoE Escrow-98821",
+      "to_beneficiary": "National Infra & Civic Builders Ltd (NICBL)",
+      "bank_account_masked": "SBI A/C ***9012",
+      "approved_by": "Shri Arvind Kaushik, IAS (Director)",
+      "verified_by_inspector": "Er. Deepa Nair (PWD-QI-DL-088)",
+      "timestamp": "2026-07-16T11:45:00Z",
+      "cryptographic_hash": "SHA256: 9b2d88c2f1e63a137e5e3408a0d421d01fcf2634d284a1e944b0451cfbc988a1"
+    },
+    {
+      "id": "tx_pfms_003",
+      "utr_no": "PFMS2026032700341188",
+      "project_id": "proj_2",
+      "milestone_id": "mile_2_1",
+      "amount": 1600000,
+      "from_account": "Delhi State Consolidated Fund / Solar Grant",
+      "to_beneficiary": "Surya CleanTech & Solar EPC Solutions",
+      "bank_account_masked": "HDFC A/C ***4431",
+      "approved_by": "Dr. Meenakshi Sundaram, IAS",
+      "verified_by_inspector": "Er. Rajesh K (EE Electrical)",
+      "timestamp": "2026-03-27T10:00:00Z",
+      "cryptographic_hash": "SHA256: 3c62184518749a909477e7d6ab0251787c95e1e12760773d2745347209995166"
+    },
+    {
+      "id": "tx_pfms_004",
+      "utr_no": "PFMS2026080800561234",
+      "project_id": "proj_2",
+      "milestone_id": "mile_2_2",
+      "amount": 1600000,
+      "from_account": "Delhi State Consolidated Fund / Digital Edu",
+      "to_beneficiary": "Surya CleanTech & Solar EPC Solutions",
+      "bank_account_masked": "HDFC A/C ***4431",
+      "approved_by": "Dr. Meenakshi Sundaram, IAS",
+      "verified_by_inspector": "Er. Rajesh K (EE Electrical)",
+      "timestamp": "2026-08-08T15:30:00Z",
+      "cryptographic_hash": "SHA256: 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+version: '3.9'
+
+services:
+  # ─────────────────────────────────────────────
+  # PostgreSQL Database
+  # ─────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    container_name: fundtofield_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: fundtofield
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: govtech@2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fundtofield"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─────────────────────────────────────────────
+  # Fund to Field Application Server
+  # ─────────────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fundtofield_app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: fundtofield
+      DB_USER: postgres
+      DB_PASSWORD: govtech@2026
+      GEOFENCE_RADIUS_METERS: 500
+    volumes:
+      - uploads_data:/app/server/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ─────────────────────────────────────────────
+  # Seed Service (runs once to populate database)
+  # ─────────────────────────────────────────────
+  seed:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fundtofield_seed
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: fundtofield
+      DB_USER: postgres
+      DB_PASSWORD: govtech@2026
+    command: node server/db/seed.js
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+    profiles:
+      - seed
+
+volumes:
+  postgres_data:
+    driver: local
+  uploads_data:
+    driver: local

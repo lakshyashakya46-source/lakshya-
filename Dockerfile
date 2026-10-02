@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────
+# Stage 1: Build React frontend
+# ─────────────────────────────────────────────
+FROM node:20-alpine AS frontend-builder
+WORKDIR /app/client
+COPY client/package*.json ./
+RUN npm ci
+COPY client/ ./
+RUN npm run build
+
+# ─────────────────────────────────────────────
+# Stage 2: Production server
+# ─────────────────────────────────────────────
+FROM node:20-alpine AS production
+WORKDIR /app
+
+# Install server dependencies
+COPY server/package*.json ./server/
+RUN cd server && npm ci --omit=dev
+
+# Copy server source
+COPY server/ ./server/
+
+# Copy built frontend from Stage 1
+COPY --from=frontend-builder /app/client/dist ./client/dist
+
+# Create uploads directory
+RUN mkdir -p ./server/uploads
+
+# Expose API port
+EXPOSE 5000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+  CMD wget -qO- http://localhost:5000/api/analytics || exit 1
+
+# Start server
+CMD ["node", "server/index.js"]

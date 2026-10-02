@@ -1,0 +1,20 @@
+{
+  "name": "fund-to-field",
+  "version": "1.0.0",
+  "description": "Fund to Field (निधि से निर्माण) - Transparent GovTech Public Fund Tracking & Real-Time Field Verification Platform",
+  "main": "server/index.js",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "seed": "node server/db/seed.js",
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"node server/index.js\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Lakshya / Fund to Field Initiative",
+  "license": "ISC"
+}

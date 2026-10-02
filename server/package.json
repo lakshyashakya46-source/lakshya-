@@ -1,0 +1,19 @@
+{
+  "name": "fund-to-field-server",
+  "version": "1.0.0",
+  "description": "GovTech REST API for Fund to Field (Nidhi Se Nirman) — PostgreSQL Edition",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "seed": "node db/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.12.0",
+    "xlsx": "^0.18.5"
+  }
+}
