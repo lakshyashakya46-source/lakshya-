@@ -136,7 +136,7 @@ export default function App() {
             {activeRole === 'OFFICER' && (
               <OfficerDashboard
                 analytics={analytics}
-                projects={projects}
+                projects={filteredProjects}
                 onRefresh={loadAllData}
                 onOpenProject={(id) => setSelectedProjectId(id)}
               />
@@ -144,8 +144,8 @@ export default function App() {
 
             {activeRole === 'BENEFICIARY' && (
               <BeneficiaryPortal
-                entities={entities}
-                projects={projects}
+                entities={filteredEntities}
+                projects={filteredProjects}
                 onRefresh={loadAllData}
                 onOpenProject={(id) => setSelectedProjectId(id)}
               />
@@ -153,7 +153,7 @@ export default function App() {
 
             {activeRole === 'CONTRACTOR' && (
               <ContractorPortal
-                projects={projects}
+                projects={filteredProjects}
                 contractors={contractors}
                 onRefresh={loadAllData}
                 onOpenProject={(id) => setSelectedProjectId(id)}
@@ -162,8 +162,8 @@ export default function App() {
 
             {activeRole === 'INSPECTOR' && (
               <InspectorTerminal
-                projects={projects}
-                entities={entities}
+                projects={filteredProjects}
+                entities={filteredEntities}
                 onRefresh={loadAllData}
                 onOpenProject={(id) => setSelectedProjectId(id)}
               />
@@ -171,10 +171,10 @@ export default function App() {
 
             {activeRole === 'CITIZEN' && (
               <PublicPortal
-                entities={entities}
-                projects={projects}
-                ledger={ledger}
-                grievances={grievances}
+                entities={filteredEntities}
+                projects={filteredProjects}
+                ledger={filteredLedger}
+                grievances={filteredGrievances}
                 onRefresh={loadAllData}
                 onOpenProject={(id) => setSelectedProjectId(id)}
               />
