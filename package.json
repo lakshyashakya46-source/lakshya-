@@ -10,8 +10,7 @@
     "client": "npm --prefix client run dev",
     "dev": "concurrently \"node server/index.js\" \"npm --prefix client run dev\"",
     "build": "npm --prefix client run build",
-    "start": "node db/seed.js && node index.js"
-    
+    "start": "node server/db/seed.js && node server/index.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

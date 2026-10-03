@@ -14,8 +14,8 @@ import {
 } from './services/api';
 
 export default function App() {
-  const [activeRole, setActiveRole] = useState('OFFICER'); // OFFICER, BENEFICIARY, CONTRACTOR, INSPECTOR, CITIZEN
-  const [activeSector, setActiveSector] = useState('ALL'); // ALL, EDU, TRANS, STARTUP, WATER, HEALTH
+  const [activeRole, setActiveRole] = useState('OFFICER');
+  const [activeSector, setActiveSector] = useState('ALL');
   const [selectedProjectId, setSelectedProjectId] = useState(null);
 
   const [loading, setLoading] = useState(true);
@@ -29,7 +29,15 @@ export default function App() {
 
   const loadAllData = async () => {
     try {
-      const [anData, deptData, entData, projData, contData, ledData, grievData] = await Promise.all([
+      const [
+        anData,
+        deptData,
+        entData,
+        projData,
+        contData,
+        ledData,
+        grievData
+      ] = await Promise.all([
         fetchAnalytics(),
         fetchDepartments(),
         fetchEntities(),
@@ -38,6 +46,7 @@ export default function App() {
         fetchLedger(),
         fetchGrievances()
       ]);
+
       setAnalytics(anData);
       setDepartments(deptData);
       setEntities(entData);
@@ -51,9 +60,57 @@ export default function App() {
       setLoading(false);
     }
   };
-useEffect(() => {
-  loadAllData();
-}, []);
+
+  useEffect(() => {
+    loadAllData();
+  }, []);
+
+  // ============================================================
+  // SECTOR FILTER
+  // ============================================================
+
+  const filteredProjects =
+    activeSector === 'ALL'
+      ? projects
+      : projects.filter(
+          project => project.dept_code === activeSector
+        );
+
+  const filteredEntities =
+    activeSector === 'ALL'
+      ? entities
+      : entities.filter(entity => {
+          const belongsToSector =
+            entity.dept_code === activeSector;
+
+          const hasProjectInSector = filteredProjects.some(
+            project => project.entity_id === entity.id
+          );
+
+          return belongsToSector || hasProjectInSector;
+        });
+
+  const filteredLedger =
+    activeSector === 'ALL'
+      ? ledger
+      : ledger.filter(entry => {
+          const project = projects.find(
+            project => project.id === entry.project_id
+          );
+
+          return project?.dept_code === activeSector;
+        });
+
+  const filteredGrievances =
+    activeSector === 'ALL'
+      ? grievances
+      : grievances.filter(grievance => {
+          const project = projects.find(
+            project => project.id === grievance.project_id
+          );
+
+          return project?.dept_code === activeSector;
+        });
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col text-slate-900 font-sans selection:bg-amber-100 selection:text-amber-900">
